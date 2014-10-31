@@ -1,0 +1,344 @@
+
+IronFoot2014.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800200  00000220  00000294  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000220  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000294  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 000000c8  00000000  00000000  000002c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000534  00000000  00000000  0000038c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000001fa  00000000  00000000  000008c0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   000002cd  00000000  00000000  00000aba  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  0000016c  00000000  00000000  00000d88  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    000001ef  00000000  00000000  00000ef4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    000001f5  00000000  00000000  000010e3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000098  00000000  00000000  000012d8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 72 00 	jmp	0xe4	; 0xe4 <__ctors_end>
+   4:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+   8:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+   c:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  10:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  14:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  18:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  1c:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  20:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  24:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  28:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  2c:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  30:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  34:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  38:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  3c:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  40:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  44:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  48:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  4c:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  50:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  54:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  58:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  5c:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  60:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  64:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  68:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  6c:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  70:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  74:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  78:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  7c:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  80:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  84:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  88:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  8c:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  90:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  94:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  98:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  9c:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  a0:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  a4:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  a8:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  ac:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  b0:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  b4:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  b8:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  bc:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  c0:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  c4:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  c8:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  cc:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  d0:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  d4:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  d8:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  dc:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+  e0:	0c 94 7c 00 	jmp	0xf8	; 0xf8 <__bad_interrupt>
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d1 e2       	ldi	r29, 0x21	; 33
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	0e 94 03 01 	call	0x206	; 0x206 <main>
+  f4:	0c 94 0e 01 	jmp	0x21c	; 0x21c <_exit>
+
+000000f8 <__bad_interrupt>:
+  f8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000fc <init_adc>:
+	return ADC;
+}
+ 
+void init_adc(){
+	
+	DDRF = 0x00;
+  fc:	10 ba       	out	0x10, r1	; 16
+	DDRK = 0x00;
+  fe:	10 92 07 01 	sts	0x0107, r1
+	
+	ADMUX = (1 << REFS0);
+ 102:	80 e4       	ldi	r24, 0x40	; 64
+ 104:	80 93 7c 00 	sts	0x007C, r24
+	ADCSRA = 0;
+ 108:	ea e7       	ldi	r30, 0x7A	; 122
+ 10a:	f0 e0       	ldi	r31, 0x00	; 0
+ 10c:	10 82       	st	Z, r1
+	ADCSRA |= _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0); //set clock prescaler at 128
+ 10e:	80 81       	ld	r24, Z
+ 110:	87 60       	ori	r24, 0x07	; 7
+ 112:	80 83       	st	Z, r24
+	ADCSRA |= _BV(ADEN);         // enable ADC
+ 114:	80 81       	ld	r24, Z
+ 116:	80 68       	ori	r24, 0x80	; 128
+ 118:	80 83       	st	Z, r24
+	ADCSRA |= _BV(ADSC);          //start first conversion
+ 11a:	80 81       	ld	r24, Z
+ 11c:	80 64       	ori	r24, 0x40	; 64
+ 11e:	80 83       	st	Z, r24
+ 120:	08 95       	ret
+
+00000122 <set_right_motor>:
+
+#include "helper.h"
+
+void set_right_motor(int type, int speed){
+
+	switch(type){
+ 122:	81 30       	cpi	r24, 0x01	; 1
+ 124:	91 05       	cpc	r25, r1
+ 126:	39 f0       	breq	.+14     	; 0x136 <set_right_motor+0x14>
+ 128:	02 97       	sbiw	r24, 0x02	; 2
+ 12a:	51 f4       	brne	.+20     	; 0x140 <set_right_motor+0x1e>
+		case BACK:
+		OCR2A = speed;
+ 12c:	60 93 b3 00 	sts	0x00B3, r22
+		OCR2B = 0;
+ 130:	10 92 b4 00 	sts	0x00B4, r1
+		break;
+ 134:	08 95       	ret
+		
+		case FRONT:
+		
+		OCR2A = 0;
+ 136:	10 92 b3 00 	sts	0x00B3, r1
+		OCR2B = speed;
+ 13a:	60 93 b4 00 	sts	0x00B4, r22
+		break;
+ 13e:	08 95       	ret
+		
+		default:
+		OCR2A = 0;
+ 140:	10 92 b3 00 	sts	0x00B3, r1
+		OCR2B = 0;
+ 144:	10 92 b4 00 	sts	0x00B4, r1
+ 148:	08 95       	ret
+
+0000014a <set_left_motor>:
+		
+		break;
+	}
+}
+void set_left_motor(int type, int speed){
+		switch(type){
+ 14a:	81 30       	cpi	r24, 0x01	; 1
+ 14c:	91 05       	cpc	r25, r1
+ 14e:	59 f0       	breq	.+22     	; 0x166 <set_left_motor+0x1c>
+ 150:	02 97       	sbiw	r24, 0x02	; 2
+ 152:	91 f4       	brne	.+36     	; 0x178 <set_left_motor+0x2e>
+			case BACK:
+			OCR1A = speed;
+ 154:	70 93 89 00 	sts	0x0089, r23
+ 158:	60 93 88 00 	sts	0x0088, r22
+			OCR1B  = 0;
+ 15c:	10 92 8b 00 	sts	0x008B, r1
+ 160:	10 92 8a 00 	sts	0x008A, r1
+			break;
+ 164:	08 95       	ret
+			
+			case FRONT:
+			OCR1A = 0;
+ 166:	10 92 89 00 	sts	0x0089, r1
+ 16a:	10 92 88 00 	sts	0x0088, r1
+			OCR1B  = speed;
+ 16e:	70 93 8b 00 	sts	0x008B, r23
+ 172:	60 93 8a 00 	sts	0x008A, r22
+			
+			break;
+ 176:	08 95       	ret
+			
+			default:
+			
+			OCR1A = 0;
+ 178:	10 92 89 00 	sts	0x0089, r1
+ 17c:	10 92 88 00 	sts	0x0088, r1
+			OCR1B  = 0;
+ 180:	10 92 8b 00 	sts	0x008B, r1
+ 184:	10 92 8a 00 	sts	0x008A, r1
+ 188:	08 95       	ret
+
+0000018a <front>:
+void left(int speed){
+	set_right_motor(FRONT,speed);
+	set_left_motor(BACK,speed);
+}
+
+void front(int speed){
+ 18a:	cf 93       	push	r28
+ 18c:	df 93       	push	r29
+ 18e:	ec 01       	movw	r28, r24
+	set_right_motor(FRONT,speed);
+ 190:	bc 01       	movw	r22, r24
+ 192:	81 e0       	ldi	r24, 0x01	; 1
+ 194:	90 e0       	ldi	r25, 0x00	; 0
+ 196:	0e 94 91 00 	call	0x122	; 0x122 <set_right_motor>
+	set_left_motor(FRONT,speed);
+ 19a:	be 01       	movw	r22, r28
+ 19c:	81 e0       	ldi	r24, 0x01	; 1
+ 19e:	90 e0       	ldi	r25, 0x00	; 0
+ 1a0:	0e 94 a5 00 	call	0x14a	; 0x14a <set_left_motor>
+}
+ 1a4:	df 91       	pop	r29
+ 1a6:	cf 91       	pop	r28
+ 1a8:	08 95       	ret
+
+000001aa <initTimers>:
+	OCR0A = 0;
+	OCR0B  = 70;
+}
+
+void initTimers() {
+	TCCR0A = (1<<COM0A1) | (1<<COM0B1) | (1 << WGM00) | (1 << WGM01);
+ 1aa:	83 ea       	ldi	r24, 0xA3	; 163
+ 1ac:	84 bd       	out	0x24, r24	; 36
+	TCCR0B =  (1<< CS02) ;// | (1<<CS00) ;
+ 1ae:	94 e0       	ldi	r25, 0x04	; 4
+ 1b0:	95 bd       	out	0x25, r25	; 37
+
+
+	TCCR1A = (1<<COM1A1) | (1<<COM1B1) | (1<<WGM12) | (1 << WGM10);
+ 1b2:	29 ea       	ldi	r18, 0xA9	; 169
+ 1b4:	20 93 80 00 	sts	0x0080, r18
+	TCCR1B =  (1<< CS12) ;
+ 1b8:	90 93 81 00 	sts	0x0081, r25
+	
+	
+	TCCR2A = (1<<COM2A1) | (1<<COM2B1) | (1<< WGM21) | (1 << WGM20);
+ 1bc:	80 93 b0 00 	sts	0x00B0, r24
+	TCCR2B =  (1<< CS22) | (1<<CS21) ;
+ 1c0:	86 e0       	ldi	r24, 0x06	; 6
+ 1c2:	80 93 b1 00 	sts	0x00B1, r24
+	
+	
+	OCR0A = 0;
+ 1c6:	17 bc       	out	0x27, r1	; 39
+	OCR0B = 0;
+ 1c8:	18 bc       	out	0x28, r1	; 40
+	OCR1A = 0;
+ 1ca:	10 92 89 00 	sts	0x0089, r1
+ 1ce:	10 92 88 00 	sts	0x0088, r1
+	OCR1B = 0;
+ 1d2:	10 92 8b 00 	sts	0x008B, r1
+ 1d6:	10 92 8a 00 	sts	0x008A, r1
+	OCR2A = 0;
+ 1da:	10 92 b3 00 	sts	0x00B3, r1
+	OCR2B = 0;
+ 1de:	10 92 b4 00 	sts	0x00B4, r1
+ 1e2:	08 95       	ret
+
+000001e4 <initMotors>:
+}
+
+void initMotors(){
+	
+	DDRH |= (1 << PH6);
+ 1e4:	e1 e0       	ldi	r30, 0x01	; 1
+ 1e6:	f1 e0       	ldi	r31, 0x01	; 1
+ 1e8:	80 81       	ld	r24, Z
+ 1ea:	80 64       	ori	r24, 0x40	; 64
+ 1ec:	80 83       	st	Z, r24
+	
+	DDRG |= (1 << PG5);
+ 1ee:	9d 9a       	sbi	0x13, 5	; 19
+	
+	DDRB |= (1<<PB4) | (1<<PB5) | (1<<PB6) | (1<<PB7);
+ 1f0:	84 b1       	in	r24, 0x04	; 4
+ 1f2:	80 6f       	ori	r24, 0xF0	; 240
+ 1f4:	84 b9       	out	0x04, r24	; 4
+	
+	initTimers();
+ 1f6:	0e 94 d5 00 	call	0x1aa	; 0x1aa <initTimers>
+ 1fa:	08 95       	ret
+
+000001fc <initIO>:
+}
+
+void initIO() {
+	
+	DDRD =0x00;
+ 1fc:	1a b8       	out	0x0a, r1	; 10
+	//PORTD =0xFF;
+	
+	DDRC &= ~((1<< PIN_LEFT_BOTTOM) | (1<<PIN_LEFT_TOP)| (1<<PIN_RIGHT_TOP));
+ 1fe:	87 b1       	in	r24, 0x07	; 7
+ 200:	88 7f       	andi	r24, 0xF8	; 248
+ 202:	87 b9       	out	0x07, r24	; 7
+ 204:	08 95       	ret
+
+00000206 <main>:
+#include "helper.h"
+#include "adc_helper.h"
+
+int main(void)
+{
+	initMotors();
+ 206:	0e 94 f2 00 	call	0x1e4	; 0x1e4 <initMotors>
+	initIO(); 
+ 20a:	0e 94 fe 00 	call	0x1fc	; 0x1fc <initIO>
+	init_adc();
+ 20e:	0e 94 7e 00 	call	0xfc	; 0xfc <init_adc>
+	front(10);
+ 212:	8a e0       	ldi	r24, 0x0A	; 10
+ 214:	90 e0       	ldi	r25, 0x00	; 0
+ 216:	0e 94 c5 00 	call	0x18a	; 0x18a <front>
+ 21a:	ff cf       	rjmp	.-2      	; 0x21a <main+0x14>
+
+0000021c <_exit>:
+ 21c:	f8 94       	cli
+
+0000021e <__stop_program>:
+ 21e:	ff cf       	rjmp	.-2      	; 0x21e <__stop_program>

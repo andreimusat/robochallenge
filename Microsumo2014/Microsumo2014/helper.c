@@ -95,11 +95,26 @@ void initMotors(){
 }
 
 void initIO() {
-	DDRD &= ~((1<< DIST1) | (1<< DIST2) | (1<< DIST3) | (1<< DIST4) | (1<< DIST5));
-	PORTD |= (1<< DIST1) | (1<< DIST2) | (1<< DIST3) | (1<< DIST4) | (1<< DIST5);
+	DDRC &= ~((1<< DIST1) | (1<< DIST2) | (1<< DIST3) | (1<< DIST4) | (1<< DIST5) | (1<<DIST6));
+//	PORTC |= (1<< DIST1) | (1<< DIST2) | (1<< DIST3) | (1<< DIST4) | (1<< DIST5) | (1<<DIST6);
 	
-	DDRC &= ~((1<< LINE1) | (1<<LINE2));
-	PORTC |= (1<< LINE1) | (1<<LINE2);
+	DDRD &= ~((1<< LINE1) | (1<<LINE2));
+	PORTD |= (1<< LINE1) | (1<<LINE2);
+}
+
+void initADC() {
+	ADMUX = (1 << REFS0);
+	ADCSRA = (1 << ADEN) | (7 << ADPS0);
+}
+
+int ADC_get(uint8_t channel)
+{
+	ADMUX = (ADMUX & ~(0x1f << MUX0)) | channel;
+
+	ADCSRA |= (1 << ADSC);
+	while(ADCSRA & (1 << ADSC));
+
+	return ADC;
 }
 
 int waitForStartSignal() {

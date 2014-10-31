@@ -13,9 +13,56 @@
 
 int flag = 0;
 
-void dist(){
+void line() {
 	
-	if( FRONT_SENSOR == 0 ) {
+	front(SPEED_LOW);
+	
+	
+	if(RIGHT_LINE == 0) {
+		//back(SPEED_MAX);
+		//_delay_ms(100);
+		//left(SPEED_MED);
+		stop();
+		_delay_ms(100);
+	} 
+	if(LEFT_LINE == 0) {
+		//back(SPEED_MAX);
+		//_delay_ms(100);
+		//right(SPEED_MED);
+		//_delay_ms(100);
+		stop();
+		_delay_ms(100);
+	}
+	//front(SPEED_LOW);
+	
+}
+
+void lineFront() {
+	
+	if(RIGHT_LINE == 0) {
+		back(SPEED_MAX); //Back full speeed ?
+		_delay_ms(100);
+		left(SPEED_MED);
+		_delay_ms(100);
+	}
+	if(LEFT_LINE == 0) {
+		back(SPEED_MAX);
+		_delay_ms(100);
+		right(SPEED_MED);
+		_delay_ms(100);
+	}
+	
+}
+
+void dist(){
+	//front(SPEED_MED);
+	if ((ADC_get(3) > 500) || (ADC_get(4) > 500) || (ADC_get(0) > 500) || (ADC_get(1) > 500) || (ADC_get(2) > 500) || (ADC_get(5) > 500)) {
+		front(SPEED_MED);
+		_delay_ms(100);
+		stop();
+	}
+	
+	/*if( FRONT_SENSOR == 0 ) {
 		
 		if ( FRONT_LEFT == 0 ) {
 			left(SPEED_MED);
@@ -94,47 +141,8 @@ void dist(){
 		right(SPEED_MED);
 		_delay_ms(25);
 		return;
-	}
-	stop();
-}
-
-
-void line() {
-	
-	front(SPEED_LOW);
-	
-	
-	if(RIGHT_LINE == 0) {
-		back(SPEED_MAX);
-		_delay_ms(100);
-		left(SPEED_MED);
-		_delay_ms(100);
-	} 
-	if(LEFT_LINE == 0) {
-		back(SPEED_MAX);
-		_delay_ms(100);
-		right(SPEED_MED);
-		_delay_ms(100);
-	}
-	//front(SPEED_LOW);
-	
-}
-
-void lineFront() {
-	
-	if(RIGHT_LINE == 0) {
-		back(SPEED_MAX); //Back full speeed ?
-		_delay_ms(100);
-		left(SPEED_MED);
-		_delay_ms(100);
-	}
-	if(LEFT_LINE == 0) {
-		back(SPEED_MAX);
-		_delay_ms(100);
-		right(SPEED_MED);
-		_delay_ms(100);
-	}
-	
+	}*/
+	//stop();
 }
 
 int main(void)
@@ -142,17 +150,16 @@ int main(void)
 	//_delay_ms(2000);
 	initMotors();
 	initIO(); 
+	initADC();
 		
 	//while ( waitForStartSignal() == 0 );
 		
     while(1)
     {
-		
+		//front(SPEED_MED);
 		dist();
-		line();
-		kill();
-
-        //TODO:: Please write your application code 
+		//line();
+		//kill();
     }
 	return 0;
 }

@@ -20,26 +20,32 @@
 #define BACK 2
 #define STOP 0
 
-#define DIST1 PD0
-#define DIST2 PD1
-#define DIST3 PD2
-#define DIST4 PD3
-#define DIST5 PD4
+#define DIST1 PC2
+#define DIST2 PC1
+#define DIST3 PC3
+#define DIST4 PC4
+#define DIST5 PC5
+#define DIST6 PC0
 
-#define LINE1 PC0
-#define LINE2 PC1
+#define LINE1 PD0
+#define LINE2 PD1
+#define LINE3 PD2
+#define LINE4 PD3
 
 #define START PB6
 #define KILL  PB7
  
-#define BACK_LEFT (PIND & (1<< DIST1))
-#define FRONT_LEFT (PIND & (1<< DIST2))
-#define FRONT_SENSOR (PIND & (1<< DIST4))
-#define FRONT_RIGHT (PIND & (1<< DIST3)) 
-#define BACK_RIGHT (PIND & (1<< DIST5))
+#define BACK_LEFT (PINC & (1<< DIST6))
+#define BACK_RIGHT (PINC & (1<< DIST4))
+#define BACK_SENSOR (PINC & (1<<DIST5))
+#define FRONT_LEFT (PINC & (1<< DIST2))
+#define FRONT_SENSOR (PINC & (1<< DIST1))
+#define FRONT_RIGHT (PINC & (1<< DIST3)) 
 
-#define LEFT_LINE (PINC & (1<<LINE1))
-#define RIGHT_LINE (PINC & (1<<LINE2))
+#define LEFT_LINE (PIND & (1<<LINE1))
+#define RIGHT_LINE (PIND & (1<<LINE2))
+#define LEFT_INNER_LINE (PIND & (1<<LINE3))
+#define RIGHT_INNER_LINE (PIND & (1<<LINE4))
 
 #define START_ROBO (PINB & (1 << START))
 #define KILL_ROBO (PINB & (1 << KILL))
